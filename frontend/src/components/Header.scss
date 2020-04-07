@@ -1,0 +1,14 @@
+@import "src/App";
+
+.title {
+  color: hsl(250,0%,100%);
+  text-shadow: 5px 1px hsl(340,100%,50%), 7px 3px hsl(0,0%,0%), 11px 6px hsl(110,100%,50%);
+  letter-spacing: .1rem;
+  text-align: center;
+  font-size: 4rem;
+  font-family: birra-2, serif;
+
+  @include mobile() {
+    display: block!important;
+  }
+}
