@@ -68,7 +68,7 @@ plt.xlabel('followers')
 plt.ylabel('popularity')
 plt.grid(which='both')
 ~~~
-![follower-popularity](./followers-popularity.png)
+![follower-popularity](./followers-popularity.png)  
 If popularity is 10^2, that tweet has 100 times as many favorites as avarage. 
 ~~~
 df.to_csv('mediaanalyzed.csv')
