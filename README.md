@@ -3,7 +3,7 @@ Do regression analysis for number of followers and favorites of some tweets rela
 Currently, the topic is Splatoon!
 
 ### buzzclip
-the name of Django project. It contains settings.py.
+The name of Django project. It contains settings.py.
 
 ### mainapp
 Django application that handles data and passes it to React through API.
