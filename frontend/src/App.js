@@ -40,7 +40,7 @@ const App = () => {
 
     const getAPI = () => {
         axios
-            .get('http://localhost:8000/api')
+            .get('http://buzzclip.pythonanywhere.com/api')
             .then(res => {
                 setDataList(res.data)
             })
