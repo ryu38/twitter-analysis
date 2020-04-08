@@ -46,4 +46,4 @@ plt.xlabel('follower')
 plt.ylabel('favorite')
 plt.grid(which='both')
 ~~~
-![follower-favorite](./follower-favorite)
+![follower-favorite](./followers-favs.png)
