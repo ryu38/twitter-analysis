@@ -1,5 +1,5 @@
 # description
-Do regression analysis for number of followers and like of some tweets related to specific topics for acquiring popular tweets and make the list of them on website from the result.
+Do regression analysis for number of followers and favorites of some tweets related to specific topics for acquiring popular tweets and make the list of them on website from the result.
 Currently, the topic is Splatoon!
 
 ### buzzclip
@@ -18,7 +18,7 @@ Code shown as below is performed under analyzer.py
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('tweet_data.csv')
+df = pd.read_csv('tweet_data.csv') # a data list from twitter API contains number of followers and favorites.
 df = df[df["followers"] != 0].sort_values("followers")
 
 x = df["followers"]
@@ -47,3 +47,28 @@ plt.ylabel('favorite')
 plt.grid(which='both')
 ~~~
 ![follower-favorite](./followers-fav.png)
+~~~
+buz_factors = [] 
+# Popularity Index. introduced by calculating the ratio of the number of favorites of each tweet to avarage number of it.
+
+for i in range(len(df)):
+    factor = y.values[i] / (a * x.values[i] + b)
+    buz_factors.append(factor)
+
+df["buz_factors"] = buz_factors
+
+x = df["followers"]
+y = df["buz_factors"]
+
+plt.plot(x, y, "o")
+
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('followers')
+plt.ylabel('popularity')
+plt.grid(which='both')
+~~~
+![follower-popularity](./followers-popularity.png)
+~~~
+df.to_csv('mediaanalyzed.csv')
+~~~
