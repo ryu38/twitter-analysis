@@ -1,11 +1,11 @@
-# description
+# Description
 Do regression analysis for number of followers and favorites of some tweets related to specific topics for acquiring popular tweets and make the list of them on website from the result.
 Currently, the topic is Splatoon!
 
 ### buzzclip
 The name of Django project. It contains settings.py.
 
-### mainapp
+### Mainapp
 Django application that handles data and passes it to React through API.
 It also contain the analysis script named "analyzer.py" that works like referred to in description.
 
