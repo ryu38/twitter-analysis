@@ -16,6 +16,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        print('start loading tweets ...')
+
         load_dotenv(verbose=True)
 
         dotenv_path = join(dirname(__file__), '.env')
