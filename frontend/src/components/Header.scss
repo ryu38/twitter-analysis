@@ -1,0 +1,53 @@
+@import "src/App";
+@import "List/List";
+
+.header {
+  @include mobile() {
+      display: block !important;
+  }
+
+  //.title {
+  //  color: hsl(250, 0%, 100%);
+  //  text-shadow: 5px 1px hsl(340,100%,50%);
+  //  letter-spacing: .1rem;
+  //  text-align: center;
+  //  font-size: 4rem;
+  //  font-family: birra-2, serif;
+  //
+  //  @include mobile() {
+  //    display: block !important;
+  //  }
+  //}
+
+  .logo {
+    margin: 3rem auto 1rem auto;
+    width: 16rem;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  .dsc {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    //background-color: hsl(270, 100%, 50%);
+    border-radius: 20px;
+    margin: 1rem auto;
+    width: 90%;
+    padding: 0 1rem;
+
+    p {
+      text-align: center;
+      line-height: 2;
+    }
+
+    @include flex-fitting(4);
+
+    @include mobile() {
+      font-size: 1rem;
+    }
+  }
+}

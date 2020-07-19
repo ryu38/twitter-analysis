@@ -1,0 +1,12 @@
+@import "src/App";
+
+.tweet-container {
+  width: 60%;
+  max-height: 80vh;
+  margin: 0 auto;
+
+  @include mobile() {
+    display: block!important;
+    width: 95%;
+  }
+}
