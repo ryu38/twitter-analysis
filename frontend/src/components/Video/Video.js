@@ -6,13 +6,16 @@ import Icon from "./Icon";
 const Video = props => {
 
     const DI = props.displayIndex;
+    const dataList = props.dataList.slice(0,props.max);
 
     return (
         <div className={'main'}>
-            {props.dataList.slice(0,props.max).map((item, index) => (
+            {dataList.map((item, index) => (
                 <Embed
                     tweetId={item['tweet_id']}
                     display={DI == index ? "block" : "none"}
+                    lastId={props.max-1 == index ? true : false}
+                    changeLS={() => props.action.changeLS()}
                 />
             ))}
             <div className={'icon'}  style={{ display: DI == -1 ? "none": "" }}>

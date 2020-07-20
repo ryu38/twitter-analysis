@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 
+//800px => 30000px
 @mixin mobile() {
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 30000px) {
     @content
   }
 }

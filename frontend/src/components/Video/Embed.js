@@ -14,32 +14,35 @@ const Embed = (props) => {
                 lang: "ja",
             }).then(el => {
             el.style.width = "auto";
-            let sroot = el.shadowRoot;
-
-            let embeddedTweet = sroot.querySelector('.EmbeddedTweet');
-            embeddedTweet.style.maxWidth = "100%";
-
-            let thumbnail = sroot.querySelector('.NaturalImage-image').cloneNode(true);
-            let card = document.getElementById('img-' + props.tweetId);
-            card.firstChild.appendChild(thumbnail);
-
-            let textElem = sroot.querySelector('.Tweet-text');
-            let text = '';
-            for (let n of textElem.childNodes) {
-                if (n.nodeName == '#text') {
-                    text = text + n.nodeValue
-                }
+            if (props.lastId) {
+                props.changeLS()
             }
-            card.lastChild.textContent = text;
-        });
+
+            // let sroot = el.shadowRoot;
+
+            // let embeddedTweet = sroot.querySelector('.EmbeddedTweet');
+            // embeddedTweet.style.maxWidth = "100%";
+            //
+            // let thumbnail = sroot.querySelector('.NaturalImage-image').cloneNode(true);
+            // let card = document.getElementById('img-' + props.tweetId);
+            // card.firstChild.appendChild(thumbnail);
+            //
+            // let textElem = sroot.querySelector('.Tweet-text');
+            // let text = '';
+            // for (let n of textElem.childNodes) {
+            //     if (n.nodeName == '#text') {
+            //         text = text + n.nodeValue
+            //     }
+            // }
+            // card.lastChild.textContent = text;
+        })
     };
 
     useEffect( () => {
         let script = require('scriptjs');
         script('https://platform.twitter.com/widgets.js', () => {
-        tweetSet()
+            tweetSet()
         });
-        console.log('twi')
     }, []);
 
     return (

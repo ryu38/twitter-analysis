@@ -26,6 +26,7 @@ class TopList(views.APIView):
         #     lpd.save()
 
         file_name = "{}analyzed.csv".format(settings.MEDIA_ROOT)
+        print(file_name)
         df = pd.read_csv(file_name)
         Tweet.objects.all().delete()
 
