@@ -2,6 +2,10 @@
 Do regression analysis for number of followers and favorites of some tweets related to specific topics for acquiring popular tweets and make the list of them on website from the result.
 Currently, the topic is Splatoon!
 
+![list](preview/list.png)
+
+![list](preview/detail.png)
+
 ### buzzclip
 The name of Django project. It contains settings.py.
 
@@ -46,7 +50,7 @@ plt.xlabel('follower')
 plt.ylabel('favorite')
 plt.grid(which='both')
 ~~~
-![follower-favorite](./followers-fav.png)
+![follower-favorite](preview/followers-fav.png)
 ~~~
 buz_factors = [] 
 # Popularity Index. introduced by calculating the ratio of the number of favorites of each tweet to avarage number of it.
@@ -68,7 +72,7 @@ plt.xlabel('followers')
 plt.ylabel('popularity')
 plt.grid(which='both')
 ~~~
-![follower-popularity](./followers-popularity.png)  
+![follower-popularity](preview/followers-popularity.png)  
 If popularity is 10^2, that tweet has 100 times as many favorites as avarage. 
 ~~~
 df.to_csv('mediaanalyzed.csv')
