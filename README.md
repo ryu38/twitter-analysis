@@ -1,4 +1,6 @@
 # Description
+This is the webapp created for my practicing React.js when I was not used to developing webapp.
+
 Do regression analysis for number of followers and favorites of some tweets related to specific topics for acquiring popular tweets and make the list of them on website from the result.
 
 ![list](preview/list.png)
